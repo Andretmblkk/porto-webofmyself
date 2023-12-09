@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta content="andre tumbelaka - Portfolio" property="og:title" />
+    <meta
+      content="Welcome to axellFumioo portofolio."
+      property="og:description"
+    />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <meta
+      name="description"
+      content="Hai, saya Andre Novriga Tumbelaka , seorang pentester. Profesi saya fokus pada mengidentifikasi dan menutupi celah keamanan dalam sistem dan aplikasi. Saya memiliki sedikit pengalaman dalam pengujian penetrasi dan terus mengikuti perkembangan terkini di dunia keamanan siber. Jika ada yang perlu dibahas terkait keamanan digital, saya siap membantu!"
+    />
+    <meta content="https://andretmblka.my.id" property="og:url" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta
+      content="https://cdn.discordapp.com/attachments/879705257045803090/1122875331020337262/image.png"
+      property="og:image"
+    />
+    <meta content="#00004d" data-react-helmet="true" name="theme-color" />
+    <meta
+      name="twitter:card"
+      content="Halo! Saya Andre Novriga Tumbelaka, seorang pentester pemula dengan sertifikasi [jenis sertifikasi]. Saya siap untuk belajar lebih banyak dan berkontribusi dalam menjaga keamanan digital. Terima kasih!"
+    />
+    <title>Portofolio - Andre Tumbelaka</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://kit.fontawesome.com/c1cbeb7f83.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="assets/style.css" />
+    <style>
+      @import url(https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cabin&family=Kanit:wght@300&family=Montserrat+Alternates:wght@700&display=swap);
+    </style>
+    <style>
+      .card {
+        transition: all 0.3s ease;
+      }
+      .card:hover {
+        transform: scale(1.05);
+      }
+      .wrapper {
+        height: 100vh;
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .effect-wrapper {
+        text-align: center;
+        font-weight: 400;
+      }
+      #typed {
+        font-weight: 700;
+        color: #00bdff;
+      }
+      .cursor {
+        display: inline-block;
+        background-color: #b0ff95;
+        animation: blinker 0.8s infinite;
+      }
+      .cursor.typing-true {
+        animation: none;
+      }
+      @keyframes blinker {
+        0% {
+          background-color: #00aeff;
+        }
+        50% {
+          background-color: transparent;
+        }
+        100% {
+          background-color: #00aeff;
+        }
+      }
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background-color: #171f31;
+      }
+      ::-webkit-scrollbar-thumb {
+        background-color: #293143;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background-color: #262b36;
+      }
+    </style>
+    <style>
+      .loader-container {
+        background-color: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      .hollowLoader {
+        width: 3em;
+        height: 3em;
+        animation: loaderAnim 1.25s infinite ease-in-out;
+        outline: 1px solid transparent;
+      }
+      .hollowLoader .largeBox {
+        height: 3em;
+        width: 3em;
+        background-color: #ececec;
+        outline: 1px solid transparent;
+      }
+      .hollowLoader .smallBox {
+        height: 3em;
+        width: 3em;
+        background-color: #000;
+        z-index: 1;
+        outline: 1px solid transparent;
+        animation: smallBoxAnim 1.25s alternate infinite ease-in-out;
+      }
+      @keyframes smallBoxAnim {
+        0% {
+          transform: scale(0.2);
+        }
+        100% {
+          transform: scale(0.75);
+        }
+      }
+      @keyframes loaderAnim {
+        0% {
+          transform: rotate(0);
+        }
+        100% {
+          transform: rotate(90deg);
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-gray-200">
+    <div class="loader-container">
+      <div class="hollowLoader">
+        <div class="largeBox"><div class="smallBox"></div></div>
+      </div>
+    </div>
+    <div id="content" class="hidden">
+      <nav
+        class="sticky top-0 h-16 px-4 py-4 flex justify-between items-center bg-black"
+      >
+        <div class="lg:hidden">
+          <button class="navbar-burger flex items-center text-blue-600 p-3">
+            <svg
+              class="block h-4 w-4 fill-current"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>Mobile menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+            </svg>
+          </button>
+        </div>
+        <ul
+          class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6"
+        >
+          <li>
+            <a
+              style="font-family: Kanit, sans-serif"
+              class="transition duration-150 ease-in-out text-sm text-gray-100 hover:text-gray-500"
+              href="#homes"
+              rel="nofollow"
+              ><i class="text-xs fa-solid fa-house"></i>&nbsp;HOME</a
+            >
+          </li>
+          <i class="text-gray-300 fa-solid fa-ellipsis-vertical text-sm"></i>
+          <li>
+            <a
+              style="font-family: Kanit, sans-serif"
+              class="transition duration-150 ease-in-out text-sm text-gray-100 hover:text-gray-500"
+              href="#about"
+              rel="nofollow"
+              ><i class="text-xs fa-solid fa-user"></i>&nbsp;ABOUT ME</a
+            >
+          </li>
+          <i class="text-gray-300 fa-solid fa-ellipsis-vertical text-sm"></i>
+          <li>
+            <a
+              style="font-family: Kanit, sans-serif"
+              class="transition duration-150 ease-in-out text-sm text-gray-100 hover:text-gray-500"
+              href="#projects"
+              rel="nofollow"
+              ><i class="text-xs fa-solid fa-folder-open"></i>&nbsp;CERTIFICATE</a
+            >
+          </li>
+          <i class="text-gray-300 fa-solid fa-ellipsis-vertical text-sm"></i>
+          <li>
+            <a
+              style="font-family: Kanit, sans-serif"
+              class="transition duration-150 ease-in-out text-sm text-gray-100 hover:text-gray-500"
+              href="#contact"
+              rel="nofollow"
+              ><i class="text-xs fa-solid fa-phone"></i>&nbsp;CONTACT</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <aside
+        class="navbar-menu sticky peer-focus:left-0 ease-out delay-150 duration-300 z-50 hidden"
+      >
+        <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+        <nav
+          class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-gray-900 border-r overflow-y-auto"
+        >
+          <div class="flex items-center mb-8">
+            <button class="navbar-close">
+              <i class="fa-solid fa-x text-gray-300"></i>
+            </button>
+          </div>
+          <div>
+            <ul>
+              <li class="mb-1">
+                <a
+                  style="font-family: Kanit, sans-serif"
+                  class="transition duration-300 ease-in-out block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-gray-500 rounded"
+                  href="#homes"
+                  rel="nofollow"
+                  ><i class="text-xs fa-solid fa-house"></i>&nbsp;HOME</a
+                >
+              </li>
+              <li class="mb-1">
+                <a
+                  style="font-family: Kanit, sans-serif"
+                  class="transition duration-300 block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-gray-500 rounded"
+                  href="#about"
+                  rel="nofollow"
+                  ><i class="text-xs fa-solid fa-user"></i>&nbsp;ABOUT ME</a
+                >
+              </li>
+              <li class="mb-1">
+                <a
+                  style="font-family: Kanit, sans-serif"
+                  class="transition duration-300 block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-gray-500 rounded"
+                  href="#projects"
+                  rel="nofollow"
+                  ><i class="text-xs fa-solid fa-folder-open"></i
+                  >&nbsp;CERTIFICATE</a
+                >
+              </li>
+              <li class="mb-1">
+                <a
+                  style="font-family: Kanit, sans-serif"
+                  class="transition duration-300 block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-gray-500 rounded"
+                  href="#contact"
+                  rel="nofollow"
+                  ><i class="text-xs fa-solid fa-phone"></i>&nbsp;CONTACT</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="mt-auto">
+            <p class="my-4 text-xs text-center text-gray-400">
+              <span
+                >Navbar design by<a
+                  href="https://tailwindcomponents.com/u/zeeslag"
+                  rel="nofollow"
+                  >Zeeslag</a
+                ></span
+              >
+            </p>
+          </div>
+        </nav>
+      </aside>
+      <div
+        id="homes"
+        class="min-h-[92vh] text-white flex flex-col justify-center items-center"
+        style="
+          background-image: linear-gradient(
+              rgba(0, 0, 0, 0.527),
+              rgba(0, 0, 0, 0.5)
+            ),
+            url(assets/gif/background.gif);
+          background-size: cover;
+        "
+      >
+        <p class="text-3xl sm:text-5xl tracking-wider p-4 font-bold">
+          Hello guys
+        </p>
+        <div
+          id="typer"
+          class="text-2xl sm:text-3xl text-center sm:text-left font-dosis uppercase tracking-widest font-bold"
+        >
+          <h1>
+            I AM ANDRE TUMBELAKA. I'M A&nbsp;<span id="typed"></span
+            ><span class="cursor">&nbsp;</span>.
+          </h1>
+        </div>
+      </div>
+      <div
+        id="about"
+        class="container mx-auto px-4 py-8 w-full md:w-[1080px] mt-4"
+      >
+        <div class="flex flex-col items-center">
+          <h1
+            style="font-family: Cabin, sans-serif"
+            class="pt-12 text-4xl tracking-widest uppercase font-bold mb-2"
+          >
+            - about me -
+          </h1>
+          <p class="text-xl">Introduce Myself</p>
+        </div>
+        <div class="mt-4">
+          <h2 class="text-2xl font-bold mb-4">Hey There!</h2>
+          <p class="text-lg leading-loose">
+           nama saya andre tumbelaka dan merupakan pentester pemula<a
+              href="#"
+              onclick='alert(" cari apa ? sa jga cape ketik")'
+              class="text-blue-400"
+              rel="nofollow"
+              >Read more.</a
+            >
+          </p>
+        </div>
+        <div class="flex flex-col items-center mt-10">
+          <p class="text-xl">Programming Language yang sedikit saya kuasai</p>
+          <img
+            class="h-18 mt-2 mb-6 sm:mt-4 sm:mb-12 sm:h-32"
+            alt="Programming Language thats Andre  use"
+            src="assets/img/programming-lang.png"
+            loading="lazy"
+          />
+        </div>
+      </div>
+      <div id="projects" class="bg-gray-900">
+        <div
+          class="mx-auto max-w-2xl px-4 py-2 sm:px-6 sm:py-12 lg:max-w-7xl lg:px-8"
+        >
+          <div class="flex flex-col items-center">
+            <h1
+              style="font-family: Cabin, sans-serif"
+              class="pt-12 text-4xl tracking-widest uppercase text-gray-200 font-bold mb-2"
+            >
+              - Certificate -
+            </h1>
+            <p class="text-xl text-gray-400">banyak pecapaian didunia ini bahkan tak selalu berbentuk kertas</p>
+          </div>
+          <div
+            class="mt-6 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8"
+          >
+            <div class="container mx-auto px-4 py-8">
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+                  <img
+                    src="assets/img/project1.jpg"
+                    alt="first certificate"
+                    class="w-full h-48 object-cover"
+                    loading="lazy"
+                  />
+                  <div class="p-6">
+                    <h2 class="text-xl text-gray-100 font-bold mb-2">
+                      ec-councill ethical hacking essentials
+                    </h2>
+                    <p class="text-gray-400">
+                      didapatkan dengan sangat cepat 
+                    </p>
+                    <div class="mt-4">
+                      <p class="text-gray-400">
+                        <strong>pentester level</strong> (pemula)
+                      </p>
+                      <p class="text-gray-400">
+                        <strong>waktu didapat :</strong>baca sendiri di serti
+                      </p>
+                      <p class="text-gray-400">
+                        <strong>Team:</strong>  no team
+                      </p>
+                    </div>
+                   
+                  </div>
+                </div>
+                <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+                  <img
+                    src="assets/img/project2.jpg"
+                    alt="the best from the best"
+                    class="w-full h-48 object-cover"
+                    loading="lazy"
+                  />
+                  <div class="p-6">
+                    <h2 class="text-xl text-gray-100 font-bold mb-2">
+                      BSSN CERTIFICATE
+                    </h2>
+                    <p class="text-gray-400">
+                      1 kata untuk menjelaskan sertifikat ini : SULIT
+                    </p>
+                    <div class="mt-4">
+                      <p class="text-gray-400">
+                        <strong>pentester level :</strong> Advanced
+                      </p>
+                      <p class="text-gray-400">
+                        <strong>Duration:</strong> 1 month
+                      </p>
+                      <p class="text-gray-400">
+                        <strong>Team:</strong> always solo
+                      </p>
+                    </div>
+                  
+                  </div>
+                </div>
+                <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+                  <img
+                    src="assets/img/project3.jpg"
+                    alt="terbaik ketiga"
+                    class="w-full h-48 object-cover"
+                    loading="lazy"
+                  />
+                  <div class="p-6">
+                    <h2 class="text-xl text-gray-100 font-bold mb-2">
+                      dinas kominfo kulon progo
+                    </h2>
+                    <p class="text-gray-400">
+                     lumayan sulit didapatkan
+                    </p>
+                    <div class="mt-4">
+                      <p class="text-gray-400">
+                        <strong>Pentester level:</strong> intermediete
+                      </p>
+                      <p class="text-gray-400">
+                        <strong>Duration:</strong>1 weeks
+                      </p>
+                      <p class="text-gray-400">
+                        <strong>Team:</strong> always solo
+                      </p>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+              <p class="text-center mt-8 text-gray-400">
+                More of my certificate ? tdk boleh pamer, tapi sabi follow ig<a
+                  href="https://instagram.com/nyongmars_?igshid=YzAwZjE1ZTI0Zg=="
+                  class="text-blue-500"
+                  >instagram</a
+                >pages.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          id="contact"
+          class="flex justify-center items-center flex-col bg-black text-blue-600"
+          style="
+            background-image: linear-gradient(
+                rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 1)
+              ),
+              url(assets/gif/contact.gif);
+            background-size: cover;
+          "
+        >
+          <div class="w-11/12 lg:w-2/4 max-w-3xl">
+            <p
+              class="text-4xl sm:text-6xl font-dosis tracking-widest p-6 text-center font-bold mt-16"
+            >
+              wanna be friend 
+            </p>
+            <hr class="text-blue-600" />
+            <p
+              class="font-dosis font-bold tracking-[4px] text-3xl text-center p-4"
+            >
+              Contact Me!
+            </p>
+            <div>
+              <form id="contactForm" action="">
+                <div class="md:flex flex-row gap-10">
+                  <div class="lg:w-1/2">
+                    <div class="lg:w-[400px]"
+                      
+                   ></div> </div>
+                    <br />
+                    <div class="lg:w-[400px]">
+                      </textarea>
+                    </div>
+                  </div>
+                  <br />
+                  <div
+                    class="text-center text-white lg:text-left flex flex-col justify-center"
+                  
+                    ></div><span class="text-lg uppercase tracking-widest p-2"
+                      ><i class=>ANY QUESTION ? contact my gmail</span>
+                    
+                       </a>
+                    </div>
+                    <br />
+                    <div class="email">
+                      <p class="text-lg uppercase tracking-widest p-2">
+                        <i class="fas fa-envelope pr-2"></i>Email
+                      </p>
+                      <p class="text-sm p-2"> andretumbelaka8@gmail.com</p>
+                      <p class="text-sm p-2">  tumbelakaandre100@gmail.com (add khusus yang main coc)
+                      </p>
+                    </div>
+                    <br />
+                    <div class="email">
+                      <p class="text-lg uppercase tracking-widest p-2">
+
+                      </p>
+                      
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+               
+        <div
+          class="bg-[#000] text-[#fff] font-dosis flex flex-col justify-center items-center p-16"
+        
+         ></div> <div class="w-1/2 flex justify-center items-center p-5">
+            <p class="text-5xl font-bold uppercase">Andretmblka</p>
+          </div>
+          <div class="w-1/2">
+            <p class="text-center text-sm md:text-lg">Copyright © 2023</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const typedSpan = document.getElementById("typed"),
+        totype = ["PENETRATION TESTER", "WEB SECURITY", "BUG HUNTER"],
+        delayTyping_char = 125,
+        delayErasing_text = 75,
+        delayTyping_text = 2e3;
+      let totypeIndex = 0,
+        charIndex = 0;
+      function typeText() {
+        charIndex < totype[totypeIndex].length
+          ? ((typedSpan.textContent += totype[totypeIndex].charAt(charIndex)),
+            charIndex++,
+            setTimeout(typeText, delayTyping_char))
+          : setTimeout(eraseText, delayTyping_text);
+      }
+      function eraseText() {
+        0 < charIndex
+          ? ((typedSpan.textContent = totype[totypeIndex].substring(
+              0,
+              charIndex - 1
+            )),
+            --charIndex,
+            setTimeout(eraseText, delayErasing_text))
+          : (totypeIndex++,
+            totypeIndex >= totype.length && (totypeIndex = 0),
+            setTimeout(typeText, delayTyping_text));
+      }
+      window.onload = function () {
+        totype[totypeIndex].length && setTimeout(typeText, delayTyping_text);
+      };
+      var imgElement = document.getElementById("realtime-image");
+      function refreshGambar() {
+        var e = new Date().getTime();
+        (imgElement.src = imgElement.src.split("?")[0] + "?" + e),
+          console.log("(DEBUG) Refreshing image src");
+      }
+      setInterval(refreshGambar, 5e3),
+        window.addEventListener("load", function () {
+          var e = document.querySelector(".loader-container");
+          setTimeout(function () {
+            (e.style.display = "none"),
+              (document.getElementById("content").style.display = "block");
+          }, 1200);
+        });
+    </script>
+    <script src="assets/msg.js"></script>
+    <script src="assets/script.js"></script>
+  </body>
+</html>
